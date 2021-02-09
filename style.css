@@ -1,5 +1,5 @@
 body {
-  background-color: saddlebrown;
+  background-color: wheat;
 }
 
 .form,
@@ -27,5 +27,5 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  animation: fadeIn 3s linear;
+  animation: fadeIn 1s linear;
 }
