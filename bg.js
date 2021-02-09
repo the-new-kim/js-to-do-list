@@ -6,8 +6,16 @@ function paintImage(imgNumber) {
   const image = new Image();
   image.src = `img/${imgNumber + 1}.jpg`;
 
+  body.style.backgroundImage = `url(${image.src})`;
+  body.style.backgroundPosition = "center";
+  body.style.backgroundRepeat = "no-repeat";
+  body.style.backgroundSize = "cover";
+  body.style.backgroundAttachment = "fixed";
+
+  /*
   image.classList.add("bgImage");
   body.prepend(image);
+  */
 }
 
 function genRandom() {
