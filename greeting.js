@@ -1,6 +1,8 @@
+"use strict";
+
 const form = document.querySelector(".js-form"),
-  greeting = document.querySelector(".js-greetings"),
-  input = form.querySelector("input");
+  input = form.querySelector("input"),
+  greeting = document.querySelector(".js-greeting");
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -10,6 +12,8 @@ function saveName(text) {
 }
 
 function handleSubmit(event) {
+  //Syntax: element.addEventListener(event, function, useCapture);
+  //Syntax by MDN: target.addEventListener(type,listener, options or useCapture)
   event.preventDefault();
   const currentValue = input.value;
   paintGreeting(currentValue);
@@ -22,9 +26,9 @@ function askForName() {
 }
 
 function paintGreeting(text) {
-  form.classList.remove(SHOWING_CN);
+  form.classList.remove(SHOWING_CN); // this is not necessary i think...
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `HELLO! ${text}`;
+  greeting.innerText = `HELLO ${text}`;
 }
 
 function loadName() {
